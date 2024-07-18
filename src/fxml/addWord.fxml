@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="400.0" style="-fx-background-color: #c1c3e8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryAppController">
+   <children>
+      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="42.0" layoutY="375.0" mnemonicParsing="false" onAction="#addWord" prefHeight="63.0" prefWidth="316.0" style="-fx-background-color: #878dd3;">
+         <graphic>
+            <ImageView blendMode="LIGHTEN" fitHeight="47.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/add2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="addWordTarget" layoutX="42.0" layoutY="111.0" prefHeight="39.0" prefWidth="316.0" />
+      <TextArea fx:id="addWordExplain" layoutX="41.0" layoutY="196.0" prefHeight="166.0" prefWidth="316.0" />
+      <Text layoutX="42.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WORD:">
+         <font>
+            <Font name=".VnCourier Normal" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEANING:">
+         <font>
+            <Font name=".VnCourier Normal" size="23.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" graphicTextGap="15.0" layoutX="41.0" layoutY="7.0" prefHeight="71.0" prefWidth="316.0" text="WORD ADDER" textFill="WHITE">
+         <font>
+            <Font name="Imprint MT Shadow" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/add3.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="600.0" style="-fx-background-color: #c1c3e8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryAppController">
+   <children>
+      <Label alignment="CENTER" graphicTextGap="15.0" layoutX="114.0" layoutY="8.0" prefHeight="67.0" prefWidth="358.0" text="WORD EDITOR" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Imprint MT Shadow" size="30.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/edit2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <TextField fx:id="wordEdit" layoutX="177.0" layoutY="86.0" prefHeight="39.0" prefWidth="246.0" />
+      <Text layoutX="22.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDITTED WORD:" wrappingWidth="184.5367431640625">
+         <font>
+            <Font name=".VnCourier Normal" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="42.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WORD:" wrappingWidth="87.7366943359375">
+         <font>
+            <Font name=".VnCourier Normal" size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="editWordEng" layoutX="42.0" layoutY="238.0" prefHeight="39.0" prefWidth="219.0" />
+      <TextArea fx:id="editWordMeaning" layoutX="318.0" layoutY="238.0" prefHeight="120.0" prefWidth="246.0" />
+      <Text layoutX="278.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name=".VnCourier Normal" size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="36.0" layoutY="368.0" mnemonicParsing="false" onAction="#editWord" prefHeight="67.0" prefWidth="527.0" style="-fx-background-color: #878dd3;" text="EDIT" textFill="#efeeee">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="318.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEANING:">
+         <font>
+            <Font name=".VnCourier Normal" size="23.0" />
+         </font>
+      </Text>
+      <Label layoutX="64.0" layoutY="443.0" prefHeight="30.0" prefWidth="458.0" text="You can choose both or just one attribute.">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/note.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font>
+      </Label>
+      <Text layoutX="197.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHANGE TO:" wrappingWidth="191.79998779296875">
+         <font>
+            <Font name=".VnCourier Normal" size="28.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

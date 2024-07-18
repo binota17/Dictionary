@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="538.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryAppController">
+   <children>
+      <BorderPane prefHeight="538.0" prefWidth="792.0">
+         <left>
+            <ListView fx:id="listView" onInputMethodTextChanged="#suggestList" prefHeight="383.0" prefWidth="213.0" style="-fx-background-color: #c1c3e8;" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <Pane cache="true" prefHeight="127.0" prefWidth="792.0" style="-fx-background-color: #878dd3;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="wordSearch" layoutX="14.0" layoutY="64.0" onAction="#KeyCodeSuggest" prefHeight="29.0" prefWidth="197.0" promptText="Search..." style="-fx-background-color: #fcfff5;">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font></TextField>
+                  <Button fx:id="searchButton" alignment="CENTER" blendMode="OVERLAY" graphicTextGap="10.0" layoutX="222.0" layoutY="64.0" mnemonicParsing="false" onAction="#suggestList" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #c1c3e8;" text="SEARCH" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/search.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label graphicTextGap="15.0" layoutX="68.0" layoutY="-4.0" prefHeight="61.0" prefWidth="706.0" text="The freakin Dictionary" textFill="WHITE">
+                     <font>
+                        <Font name=".VnHelvetInsH Medium" size="37.0" />
+                     </font></Label>
+                  <Button fx:id="addWordButton" alignment="CENTER" contentDisplay="TOP" layoutX="589.0" layoutY="38.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="80.0" prefWidth="50.0" style="-fx-background-color: #878dd3;" text="add">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" focusTraversable="true">
+                           <image>
+                              <Image url="@../image/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delButton" alignment="CENTER" contentDisplay="TOP" layoutX="659.0" layoutY="39.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clickDel" prefHeight="80.0" prefWidth="50.0" style="-fx-background-color: #878dd3;" text="delete">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/delete.png" />
+                           </image>
+                           <effect>
+                              <Blend mode="SCREEN" />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editWordButton" alignment="CENTER" contentDisplay="TOP" layoutX="716.0" layoutY="38.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#clickEdit" prefHeight="80.0" prefWidth="50.0" style="-fx-background-color: #878dd3;" text="edit">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="518.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickSpeak" prefHeight="80.0" prefWidth="50.0" style="-fx-background-color: #878dd3;" text="speak" wrapText="true">
+                     <graphic>
+                        <ImageView blendMode="ADD" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/speaker.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button contentDisplay="TOP" layoutX="447.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickVoice" prefHeight="80.0" prefWidth="50.0" style="-fx-background-color: #878dd3;" text="voice">
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/micro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="54.0" fitWidth="60.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/label.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="voiceMessage" layoutX="399.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="150.936767578125" />
+                  <Button layoutX="332.0" layoutY="64.0" mnemonicParsing="false" onAction="#history" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #878dd3;" text="History">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/history.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c1c3e8;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="textArea" editable="false" layoutX="16.0" layoutY="16.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="358.0" prefWidth="562.0" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="21.0" />
+                     </font></TextArea>
+                  <Label alignment="TOP_RIGHT" graphicTextGap="5.0" layoutX="315.0" layoutY="378.0" prefHeight="38.0" prefWidth="249.0" text="by NMD and BVT" textFill="#fffafa">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/opensrc.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
